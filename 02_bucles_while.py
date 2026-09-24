@@ -1,8 +1,15 @@
-# Control de inventario con bucle while
-stock = 5
+# Uso de break y continue en un bucle while
+contador = 0
 
-while stock > 0:
-    print(f"Procesando venta... Unidades restantes en stock: {stock}")
-    stock -= 1  # Resta 1 al stock en cada vuelta para evitar un bucle infinito
+while contador < 5:
+    contador += 1
 
-print("¡Atención! El stock se ha agotado por completo.")
+    if contador == 3:
+        print("Saltando la iteracion numero 3 con 'continue'...")
+        continue  # Omite el print final para el 3 y salta al siguiente paso
+
+    if contador == 5:
+        print("Interrumpiendo el bucle por completo con 'break'.")
+        break  # Detiene el bucle inmediatamente
+
+    print(f"Ejecutando vuelta numero: {contador}")
